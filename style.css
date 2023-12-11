@@ -274,7 +274,7 @@ span{
 
                                                                 /* breakpoints  */
 
-@media(max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   html{
     font-size: 55%;
   }
@@ -296,7 +296,7 @@ span{
     min-height: auto;
   }
 }
-@media(max-width: 768px){
+@media screen and (max-width: 768px){
   #menu-icon{
     display: block;
   }
@@ -342,7 +342,7 @@ span{
     grid-template-columns: repeat(2, 1fr);
   }
 } 
-@media(max-width: 657px){
+@media screen and (max-width: 657px){
   body{
     overflow: hidden;
   }
@@ -357,11 +357,9 @@ span{
     width: 100%;
   }
 }
-@media(max-width: 576px){
-  
-}
-@media(max-width: 450px){
+@media screen and (max-width: 576px){
   html{
     font-size: 50%;
   }
 }
+
