@@ -15,12 +15,12 @@
     <header class="header">
       <a href="#" class="logo"><span>Port</span>folio</a>
       <i class="bx bx-menu" id="menu-icon"></i>
-        <nav class="navbar">
-          <a href="#home" class="active">Home</a>
-          <a href="#education">Education</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
     <!--home section-->
     <section class="home" id="home">
@@ -33,12 +33,14 @@
           organization that provides me with ample pace to strengthen my
           knowledge.
         </p>
-        <div class="contact">
+        <!-- <div class="contact">
           <a href="#"><i class="bx bx-mobile"></i></a>
           <a href="#"><i class="bx bxl-gmail"></i></a>
           <a href="#"><i class="bx bxl-github"></i></a>
-        </div>
-        <a href="images/Resume.pdf" target="_blank" class="btn">Download Resume</a>
+        </div> -->
+        <a href="images/Resume.pdf" target="_blank" class="btn"
+          >Download Resume</a
+        >
       </div>
     </section>
     <!-- education section -->
@@ -48,19 +50,19 @@
         <div class="education-box">
           <i class="bx bxs-graduation"></i>
           <h3>B.Tech-IT</h3>
-          <p>91%</p>
+          <p><span>91%</span></p>
           <p>Sethu Institute of Technology, Virudhunagar</p>
         </div>
         <div class="education-box">
           <i class="bx bx-pen"></i>
           <h3>HSC</h3>
-          <p>81.9%</p>
+          <p><span>81.9%</span></p>
           <p>Kurinji Higher Secondary School, Namakkal</p>
         </div>
         <div class="education-box">
           <i class="bx bxs-pencil"></i>
           <h3>SSLC</h3>
-          <p>97.2%</p>
+          <p><span>97.2%</span></p>
           <p>Goodwill Higher Secondary School, Manamadurai</p>
         </div>
       </div>
@@ -70,7 +72,7 @@
       <h2 class="heading">Skills</h2>
       <div class="skills-container">
         <div class="skills-box">
-          <img src="images/Java1.jpg" />
+          <img src="images/Java1.jpg" class="img-fluid" />
           <div class="skills-layer">
             <h4>Java</h4>
             <p>Comfortable with OOPs and collection framework</p>
@@ -79,7 +81,7 @@
         </div>
 
         <div class="skills-box">
-          <img src="images/Spring boot1.jpg" />
+          <img src="images/Spring boot1.jpg" class="img-fluid" />
           <div class="skills-layer">
             <h4>Spring Boot</h4>
             <p>Familiar with fundamentals and developed a simple project</p>
@@ -88,7 +90,7 @@
         </div>
 
         <div class="skills-box">
-          <img src="images/mysql1.png" />
+          <img src="images/mysql1.png" class="img-fluid" />
           <div class="skills-layer">
             <h4>MySQL</h4>
             <p>Comfortable with joins and had implemented in a project</p>
@@ -97,7 +99,7 @@
         </div>
 
         <div class="skills-box">
-          <img src="images/react1.jpg" />
+          <img src="images/react1.jpg" class="img-fluid" />
           <div class="skills-layer">
             <h4>React JS</h4>
             <p>Created user interface and integrated with backend</p>
@@ -128,6 +130,9 @@
         <input type="submit" value="Send message" class="btn" />
       </form>
     </section>
+    <!-- scroll reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- script.js  -->
     <script src="script.js"></script>
   </body>
 </html>
