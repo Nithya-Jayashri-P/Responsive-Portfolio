@@ -343,6 +343,9 @@ span{
   }
 } 
 @media(max-width: 617px){
+  body{
+    overflow: hidden;
+  }
   .skills-container{
     grid-template-columns: 1fr;
   }
