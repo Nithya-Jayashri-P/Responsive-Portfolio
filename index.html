@@ -113,16 +113,16 @@
       <h2 class="heading">Contact <span>Me</span></h2>
       <form action="#">
         <div class="input-box">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email Address" />
+          <input type="text" placeholder="Name" id="name" />
+          <input type="email" placeholder="Email Address" id="email" />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile" />
-          <input type="text" placeholder="Email subject" />
+          <input type="number" placeholder="Mobile" id="Mobile" />
+          <input type="text" placeholder="Email subject" id="subject" />
         </div>
         <textarea
           name=""
-          id=""
+          id="message"
           cols="30"
           rows="10"
           placeholder="Enter message"
@@ -132,6 +132,8 @@
     </section>
     <!-- scroll reveal  -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- sending email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- script.js  -->
     <script src="script.js"></script>
   </body>
