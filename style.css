@@ -353,7 +353,7 @@ span{
 @media only screen and (max-width: 576px) {
   .home{
     justify-content: center;
-    padding-right: 125rem;
+    padding-right: 140rem;
     padding-left: 75rem;
   }
   .skills-container{
