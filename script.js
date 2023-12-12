@@ -1,4 +1,4 @@
-// toggle icon navbar 
+// toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -6,7 +6,7 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
 };
-// scroll sections 
+// scroll sections
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -25,11 +25,11 @@ window.onscroll = () => {
     }
   });
 
-  // sticky navbar 
+  // sticky navbar
   let header = document.querySelector('header');
   header.classList.toggle('sticky', window.scrollY > 100);
 
-  // remove toggle and navbar when click navbar link(scroll) 
+  // remove toggle and navbar when click navbar link(scroll)
   menuIcon.classList.remove('bx-x');
   navbar.classList.remove('active');
 };
@@ -46,3 +46,28 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.skills-container, .education-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home h1', { origin: 'left' });
 ScrollReveal().reveal('.home p', { origin: 'right' });
+
+// email 
+
+var btn = document.getElementById('btn');
+btn.addEventListener('click', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var mobile = document.getElementById('mobile').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
+  var body = 'name: ' + name '<br/> email: ' + email + '<br/> subject' + subject + '<br/> message' + message;
+
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "t5486mail@gmail.com",
+    Password: "tbal vrst upqm btlr",
+    To: 't5486mail@gmail.com',
+    From: email,
+    Subject: subject,
+    Body: body
+  }).then(
+    message => alert(message)
+  );
+});
