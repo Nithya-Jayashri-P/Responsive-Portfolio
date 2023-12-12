@@ -351,6 +351,9 @@ span{
   }
 }
 @media only screen and (max-width: 576px) {
+  .home{
+    padding-left: 8%;
+  }
   .home-content p{
     font-size: small;
     width: 100%;
