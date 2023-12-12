@@ -351,11 +351,11 @@ span{
   }
 }
 @media only screen and (max-width: 576px) {
-  .home{
+/*   .home{
     justify-content: center;
     padding-right: 40rem;
     padding-left: 35rem;
-  }
+  } */
   .skills-container{
     grid-template-columns: 1fr;
   }
