@@ -352,8 +352,9 @@ span{
 }
 @media only screen and (max-width: 576px) {
   .home{
-    padding-right: 50rem;
+    justify-content: center;
     padding-left: 35rem;
+    padding-right: auto;
   }
   .skills-container{
     grid-template-columns: 1fr;
