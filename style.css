@@ -354,7 +354,7 @@ span{
   .home{
     justify-content: center;
     padding-left: 35rem;
-    padding-right: auto;
+    padding-right: 100%;
   }
   .skills-container{
     grid-template-columns: 1fr;
