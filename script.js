@@ -43,9 +43,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.skills-container, .education-box, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home h1', { origin: 'left' });
-ScrollReveal().reveal('.home p', { origin: 'right' });
+ScrollReveal().reveal('.skills-container, .education-box, .contact form, .contact li', { origin: 'bottom' });
 
 // email 
 
