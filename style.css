@@ -85,33 +85,17 @@ section{
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 1.3;
+  background-image: linear-gradient(90deg, #0099e6, var(--text-color));
+  background-clip: text;
+  color: transparent;
 }
 .home-content p{
   margin-top: 20px;
   font-size: 1.6rem;
   width: 500px;
   margin: 3rem 1.5rem 3rem 0;
-  /* width: 50%; */
 }
-.contact a{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background: transparent;
-  border: .2rem solid var(--main-color);
-  border-radius: 50%;
-  font-size: 2rem;
-  color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
-  transition: .5 ease;
-}
-.contact a:hover{
-  background: var(--main-color);
-  color: var(--second-bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
-}
+
 .btn{
   display: inline-block;
   padding: 1rem 2.8rem;
@@ -127,7 +111,64 @@ section{
 .btn:hover{
   box-shadow: none;
 }
-          /*education design*/
+
+                                                            /* Skills section */
+
+.skills{
+  background: var(--second-bg-color);
+}
+.skills h2{
+  margin-bottom: 5rem;
+}
+.skills-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  align-items: center;
+  gap: 2.5rem;
+}
+.skills-container .skills-box{
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  background: var(--bg-color);
+  overflow: hidden;
+  display: flex;
+}
+.skills-box img{
+  width: 100%;
+  transition: .5 ease;
+}
+.skills-box:hover img{
+  transform: scale(.1);
+}
+.skills-box .skills-layer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: .5 ease;
+}
+.skills-box:hover .skills-layer{
+  transform: translateY(0);
+  height: 75%;
+
+}
+.skills-layer h4{
+  font-size: 3rem;
+}
+.skills-layer p{
+  font-size: 1.6rem;
+  margin: .3rem 0 1rem;
+}
+
+                                                              /* education section  */
 .heading{
   font-size: 3rem;
   text-align: center;
@@ -135,9 +176,6 @@ section{
 span{
   color: var(--main-color);
 }
-
-                                                          /* education section  */
-
 .education h2{
   margin-bottom: 5rem;
 }
@@ -172,79 +210,17 @@ span{
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
-
-                                                            /* Skills section */
-
-.skills{
-  background: var(--second-bg-color);
-}
-.skills h2{
-  margin-bottom: 5rem;
-}
-.skills-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  align-items: center;
-  gap: 2.5rem;
-}
-.skills-container .skills-box{
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--bg-color);
-  overflow: hidden;
-  display: flex;
-}
-.skills-box img{
-  width: 100%;
-  transition: .5 ease;
-}
-.skills-box:hover img{
-  transform: scale(1.1);
-}
-.skills-box .skills-layer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  /* width: 100%;
-  height: 100%; */
-  background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 4rem;
-  transform: translateY(100%);
-  transition: .5 ease;
-}
-.skills-box:hover .skills-layer{
-  transform: translateY(0);
-}
-.skills-layer h4{
-  font-size: 3rem;
-}
-.skills-layer p{
-  font-size: 1.6rem;
-  margin: .3rem 0 1rem;
-}
-/* .skills-layer a{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  background: var(--text-color);
-  border-radius: 50%;
-}
-.skills-layer a i{
-  font-size: 2rem;
-  color: var(--second-bg-color);
-} */
-
                                                             /* Contact section */
 
+
 .contact h2{
+  text-align: center;
   margin-bottom: 3rem;
+}
+#form-side{
+  float: right;
+  width: 80%;
+  left: 0;
 }
 .contact form{
   max-width: 70rem;
@@ -271,6 +247,62 @@ span{
 .contact form .btn{
   margin-top: 2rem;
   cursor: pointer;
+}
+#vertical-divider{
+  width: 10%;
+  border-left: 1px solid var(--text-color);
+  height: 500px;
+  position: absolute;
+  left: 17%;
+  margin: 0 auto;
+}
+#other-contacts{
+  width: 20%;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style-type: none;
+}
+.contact a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5 ease;
+}
+.contact a:hover{
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.contact button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5 ease;
+}
+.contact button:hover{
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
 }
 
                                                                 /* breakpoints  */
@@ -340,7 +372,6 @@ span{
   }
 }
 
-
 @media only screen and (max-width: 657px) {
   body{
     overflow: hidden;
@@ -352,13 +383,16 @@ span{
 }
 @media only screen and (max-width: 576px) {
   .home{
+    /* justify-content: center; */
+    /* /* padding-left: 35rem; */
     padding-left: 8%;
   }
   .home-content p{
     font-size: small;
     width: 100%;
     justify-content: center;
-  }
+  }  
+
   .skills-container{
     grid-template-columns: 1fr;
   }
