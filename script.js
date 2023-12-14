@@ -49,25 +49,41 @@ ScrollReveal().reveal('.home p', { origin: 'right' });
 
 // email 
 
-var btn = document.getElementById('btn');
-btn.addEventListener('click', function (e) {
-  e.preventDefault();
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var mobile = document.getElementById('mobile').value;
-  var subject = document.getElementById('subject').value;
-  var message = document.getElementById('message').value;
-  var body = 'name: ' + name + '<br/> email: ' + email + '<br/> subject' + subject + '<br/> message' + message;
+// var btn = document.getElementById('btn');
+// btn.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   var name = document.getElementById('name').value;
+//   var email = document.getElementById('email').value;
+//   var mobile = document.getElementById('mobile').value;
+//   var subject = document.getElementById('subject').value;
+//   var message = document.getElementById('message').value;
+//   var body = 'name: ' + name + '<br/> email: ' + email + '<br/> subject' + subject + '<br/> message' + message;
 
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "t5486mail@gmail.com",
-    Password: "tbal vrst upqm btlr",
-    To: 't5486mail@gmail.com',
-    From: email,
-    Subject: subject,
-    Body: body
-  }).then(
-    message => alert(message)
-  );
-});
+//   Email.send({
+//     Host: "smtp.gmail.com",
+//     Username: "t5486mail@gmail.com",
+//     Password: "tbal vrst upqm btlr",
+//     To: 't5486mail@gmail.com',
+//     From: email,
+//     Subject: subject,
+//     Body: body
+//   }).then(
+//     message => alert(message)
+//   );
+// });
+
+(function () {
+  emailjs.init("1TanDbas16IAs4m8M");
+})();
+
+function sendMail() {
+  var params = {
+    from_name: document.getElementById("name").value,
+    email_id: document.getElementById("email").value,
+    mobile: document.getElementById("mobile").value,
+    message: document.getElementById("message").value,
+  };
+  emailjs.send("service_bsc0scw", "template_y0kiwve", params).then(function (res) {
+    alert("Success!" + res.status);
+  });
+}
