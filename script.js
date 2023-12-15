@@ -69,4 +69,16 @@ btn.addEventListener('click', function (e) {
     message => alert(message)
   );
 });
+//copy to clipboard;
 
+function copyText() {
+  var textToCopy = document.getElementById('textToCopy').value;
+
+  navigator.clipboard.writeText(textToCopy)
+    .then(function () {
+      alert('Email address copied!');
+    })
+    .catch(function (err) {
+      console.error('Unable to copy text to clipboard', err);
+    });
+}
