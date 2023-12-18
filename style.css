@@ -120,21 +120,6 @@ section{
 .skills h2{
   margin-bottom: 3rem;
 }
-/* .skills-container{
-  position: sticky;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  align-items: center;
-  gap: 2.5rem;
-}
-.skills-container .skills-box{
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--bg-color);
-  background: var(--bg-color);
-  overflow: hidden;
-  display: flex;
-} */
 .skills-container{
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
@@ -400,7 +385,7 @@ ul{
     font-size: 2rem;
   }
   .skills-box p{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .contact form .input-box input{
     width: 100%;
