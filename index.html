@@ -13,7 +13,7 @@
   <body>
     <!--header design-->
     <header class="header">
-      <a href="#" class="logo"><span>Port</span>folio</a>
+      <a href="#home" class="logo"><span>Port</span>folio</a>
       <i class="bx bx-menu" id="menu-icon"></i>
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
@@ -47,34 +47,26 @@
       <div class="skills-container">
         <div class="skills-box">
           <img src="images/java.svg" class="img-fluid" />
-          <div class="skills-layer">
-            <h4>Java</h4>
-            <p>Comfortable with OOPs and collection framework</p>
-          </div>
+          <h4>Java</h4>
+          <p>Comfortable with OOPs and collection framework</p>
         </div>
 
         <div class="skills-box">
           <img src="images/spring-boot.svg" class="img-fluid" />
-          <div class="skills-layer">
-            <h4>Spring Boot</h4>
-            <p>Familiar with fundamentals and developed a simple project</p>
-          </div>
+          <h4>Spring Boot</h4>
+          <p>Familiar with fundamentals and developed a simple project</p>
         </div>
 
         <div class="skills-box">
           <img src="images/mysql.svg" class="img-fluid" />
-          <div class="skills-layer">
-            <h4>MySQL</h4>
-            <p>Comfortable with joins and had implemented in a project</p>
-          </div>
+          <h4>MySQL</h4>
+          <p>Comfortable with joins and had implemented in a project</p>
         </div>
 
         <div class="skills-box">
           <img src="images/react.svg" class="img-fluid" />
-          <div class="skills-layer">
-            <h4>React JS</h4>
-            <p>Created user interface and integrated with backend</p>
-          </div>
+          <h4>React JS</h4>
+          <p>Created user interface and integrated with backend</p>
         </div>
       </div>
     </section>
@@ -108,47 +100,6 @@
 
     <section class="contact" id="contact">
       <h2 class="heading"><span>Contact</span> Me</h2>
-      <div id="form-side">
-        <form method="post">
-          <div class="input-box">
-            <input
-              type="text"
-              placeholder="Name"
-              id="name"
-              autocomplete="off"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              id="email"
-              autocomplete="off"
-            />
-          </div>
-          <div class="input-box">
-            <input
-              type="number"
-              placeholder="Mobile"
-              id="Mobile"
-              autocomplete="off"
-            />
-            <input
-              type="text"
-              placeholder="Email subject"
-              id="subject"
-              autocomplete="off"
-            />
-          </div>
-          <textarea
-            name=""
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Enter message"
-          ></textarea>
-          <input type="submit" value="Send message" class="btn" />
-        </form>
-      </div>
-      <div id="vertical-divider"></div>
       <div id="other-contacts">
         <ul class="contact">
           <li>
@@ -159,10 +110,9 @@
             ></a>
           </li>
           <li>
-            <button>
+            <button id="textToCopy">
               <i
                 class="bx bxl-gmail"
-                id="textToCopy"
                 value="pnj"
                 readonly
                 onclick="copyText()"
@@ -176,11 +126,61 @@
           </li>
         </ul>
       </div>
+
+      <div id="vertical-divider"></div>
+
+      <div id="form-side">
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Name"
+              class="mail-inputs"
+              id="name"
+              autocomplete="off"
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="mail-inputs"
+              id="email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-box">
+            <input
+              type="number"
+              placeholder="Mobile"
+              class="mail-inputs"
+              id="Mobile"
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              placeholder="Email subject"
+              class="mail-inputs"
+              id="subject"
+              autocomplete="off"
+            />
+          </div>
+          <textarea
+            name=""
+            class="mail-inputs"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Enter message"
+          ></textarea>
+          <input type="submit" value="Send message" class="btn" />
+        </form>
+      </div>
     </section>
     <!-- scroll reveal  -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- sending email -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- alert message  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- script.js  -->
     <script src="script.js"></script>
   </body>
