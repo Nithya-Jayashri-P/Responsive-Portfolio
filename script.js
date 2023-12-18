@@ -45,40 +45,43 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.skills-container, .education-box, .contact form, .contact li', { origin: 'bottom' });
 
-// email 
-
-var btn = document.getElementById('btn');
-btn.addEventListener('click', function (e) {
-  e.preventDefault();
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var mobile = document.getElementById('mobile').value;
-  var subject = document.getElementById('subject').value;
-  var message = document.getElementById('message').value;
-  var body = 'name: ' + name + '<br/> email: ' + email + '<br/> subject' + subject + '<br/> message' + message;
-
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "t5486mail@gmail.com",
-    Password: "tbal vrst upqm btlr",
-    To: 't5486mail@gmail.com',
-    From: email,
-    Subject: subject,
-    Body: body
-  }).then(
-    message => alert(message)
-  );
-});
 //copy to clipboard;
 
-function copyText() {
-  var textToCopy = document.getElementById('textToCopy').value;
+var button = document.getElementById("textToCopy");
 
-  navigator.clipboard.writeText(textToCopy)
-    .then(function () {
-      alert('Email address copied!');
-    })
-    .catch(function (err) {
-      console.error('Unable to copy text to clipboard', err);
-    });
+button.onclick = function () {
+  navigator.clipboard.writeText("nithyajayashrip@gmail.com");
+};
+
+//Send Email
+const form = document.querySelector('form');
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const mobile = document.getElementById("Mobile");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+function sendEmail() {
+  const messageBody = `Name: ${fullName.value}<br> Email: ${email.value}<br> Mobile: ${mobile.value}<br> Email subject: ${subject.value}<br> Message: ${mess.value}`;
+
+  Email.send({
+    SecureToken: "90873e42-2b71-4fa1-99ce-d2188a1d1212",
+    To: 't5486mail@gmail.com',
+    From: 't5486mail@gmail.com',
+    Subject: subject.value,
+    Body: messageBody
+  }).then(
+    message => {
+      if (message == "OK") {
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully",
+          icon: "success"
+        });
+      }
+    }
+  );
 }
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendEmail();
+});
